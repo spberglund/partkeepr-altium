@@ -20,7 +20,7 @@ Ext.define('PartKeepr.PartEditor', {
     initComponent: function ()
     {
         // Defines the overall height of all fields, used to calculate the anchoring for the description field
-        var overallHeight = (this.partMode == "create") ? 320: 265;
+        var overallHeight = (this.partMode == "create") ? 374: 319;
 
         this.nameField = Ext.create("Ext.form.field.Text", {
             name: 'name',
@@ -136,6 +136,16 @@ Ext.define('PartKeepr.PartEditor', {
                     this.footprintSet,
                     this.footprintComboBox
                 ]
+            }, {
+                xtype: 'textfield',
+                fieldLabel: i18n("Altium Footprint"),
+                allowBlank: this.isOptional("altiumFootprint"),
+                name: 'altiumFootprint'
+            }, {
+                xtype: 'textfield',
+                fieldLabel: i18n("Altium Schematic Symbol"),
+                allowBlank: this.isOptional("altiumSymbol"),
+                name: 'altiumSymbol'
             }, {
                 xtype: 'textarea',
                 fieldLabel: i18n("Comment"),

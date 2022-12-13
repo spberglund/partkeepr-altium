@@ -60,6 +60,26 @@ class Part extends BaseEntity
     private $description;
 
     /**
+     * The part's Altium Footprint.
+     *
+     * @ORM\Column(type="string",nullable=true)
+     * @Groups({"default"})
+     *
+     * @var string
+     */
+    private $altiumFootprint;
+
+    /**
+     * The part's Altium Schematic Symbol.
+     *
+     * @ORM\Column(type="string",nullable=true)
+     * @Groups({"default"})
+     *
+     * @var string
+     */
+    private $altiumSymbol;
+
+    /**
      * The footprint of this part.
      *
      * @ORM\ManyToOne(targetEntity="PartKeepr\FootprintBundle\Entity\Footprint")
@@ -416,6 +436,46 @@ class Part extends BaseEntity
     public function setInternalPartNumber($partNumber)
     {
         $this->internalPartNumber = $partNumber;
+    }
+
+    /**
+     * Returns the Altium Footprint of this part.
+     *
+     * @return string The part altium footprint
+     */
+    public function getAltiumFootprint()
+    {
+        return $this->altiumFootprint;
+    }
+
+    /**
+     * Sets the Altium Footprint for this part.
+     *
+     * @param string $altiumFootprint The part's altium footprint
+     */
+    public function setAltiumFootprint($altiumFootprint)
+    {
+        $this->altiumFootprint = $altiumFootprint;
+    }
+
+    /**
+     * Returns the Altium Schematic Symbol of this part.
+     *
+     * @return string The part symbol
+     */
+    public function getAltiumSymbol()
+    {
+        return $this->altiumSymbol;
+    }
+
+    /**
+     * Sets the Altium Schematic Symbol for this part.
+     *
+     * @param string $altiumSymbol The part's altium footprint
+     */
+    public function setAltiumSymbol($altiumSymbol)
+    {
+        $this->altiumSymbol = $altiumSymbol;
     }
 
     /**

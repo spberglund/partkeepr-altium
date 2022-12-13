@@ -16,6 +16,12 @@ Ext.define("PartKeepr.Components.Part.PartInfoGrid", {
         "footprint.name": {
             displayName: i18n("Footprint")
         },
+        "altiumFootprint": {
+            displayName: i18n("Altium Footprint")
+        },
+        "altiumSymbol": {
+            displayName: i18n("Altium Schematic Symbol")
+        },
         "storageLocation.name": {
             displayName: i18n("Storage Location")
         },

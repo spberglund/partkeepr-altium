@@ -334,6 +334,12 @@ Ext.define('PartKeepr.PartsGrid', {
                 header: i18n("Footprint"),
                 dataIndex: 'footprint.name'
             }, {
+                header: i18n("Altium Footprint"),
+                dataIndex: 'altiumFootprint'
+            }, {
+                header: i18n("Altium Schematic Symbol"),
+                dataIndex: 'altiumSymbol'
+            }, {
                 header: i18n("Category"),
                 dataIndex: "category.categoryPath",
                 hidden: true
